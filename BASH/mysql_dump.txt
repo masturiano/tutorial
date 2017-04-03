@@ -1,0 +1,8 @@
+#!/bin/bash
+/etc/init.d/mysqld stop
+scp -i /root/ec2.key 184.73.160.117:/data/mysql/feeds/master_template.* /data/mysql/feeds;
+scp -i /root/ec2.key 184.73.160.117:/data/mysql/feeds/YMMSE.* /data/mysql/feeds;
+scp -i /root/ec2.key 184.73.160.117:/data/mysql/feeds/lookup_id.* /data/mysql/feeds;
+chown mysql:mysql /data/mysql/feeds
+chown mysql:mysql /data/mysql/feeds/*
+/etc/init.d/mysqld start

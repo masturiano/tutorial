@@ -1,0 +1,10 @@
+[program:myprocess]
+command=php /path/to/project/myprocess.php
+numprocs=12
+directory=/path/to/project/spool/myprocess/
+autostart=true
+autorestart=true
+stdout_logfile=/path/to/project/log/myprocess.log
+stdout_logfile_maxbytes=1MB
+stderr_logfile=/path/to/project/log/myprocess.log
+stderr_logfile_maxbytes=1MB

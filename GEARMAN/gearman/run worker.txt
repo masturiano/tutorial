@@ -1,0 +1,2 @@
+$ php worker.php - result as supervisorctl
+$ php client.php - do the reverse function

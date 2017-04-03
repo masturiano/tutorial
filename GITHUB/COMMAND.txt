@@ -1,0 +1,16 @@
+=======
+GIT HUB
+=======
+	
+git remote add origin https://masturiano@github.com/masturiano/SAWT	
+git remote set-url origin /the/right/url	
+	
+mkdir <full_directory_path>	
+cp mygame.rb <full_directory_path>	
+cd <full_directory_path>	
+git init	
+git add mygame.rb	
+git commit -m 'game scores'	
+git remote add origin github.com/etc...	
+git push origin master:master	
+git remote -v	check the path of repository

@@ -1,0 +1,48 @@
+#!/bin/bash
+
+function sendEmail {
+        rcpt="DGTeamMarketEngineeringCore@usautoparts.com"
+        subject="EC2FEEDGEN06 NON GOOGLE LIST"
+
+        echo "$subject" |
+        mail -s "$subject" $rcpt
+}
+
+function getDir {
+        echo "================================================================================="
+        echo "UPLOADING $1"
+        if [ $1 = "JCW_FM" ]; then
+        dirAccount="/data/aopi/feeds_longbow/jcw.frugal_mechanic.staging/data/output/latest"
+        elif [ $1 = "STT_FM" ]; then
+                dirAccount="/data/aopi/feeds_longbow/stt.frugal_mechanic.staging/data/output/latest"
+        elif [ $1 = "APW_FM" ]; then
+                dirAccount="/data/aopi/feeds_longbow/auto_frugalmechanic/apw.frugal_mechanic.staging_git/data/output/latest"
+        elif [ $1 = "CP_FM" ]; then
+                dirAccount="/data/aopi/feeds_longbow/auto_frugalmechanic/cp.frugal_mechanic.staging_git/data/output/latest"
+        elif [ $1 = "PT_FM" ]; then
+                dirAccount="/data/aopi/feeds_longbow/auto_frugalmechanic/pt.frugal_mechanic.staging_git/data/output/latest"
+        elif [ $1 = "USAP_FM" ]; then
+                dirAccount="/data/aopi/feeds_longbow/auto_frugalmechanic/usap.frugal_mechanic.staging_git/data/output/latest"
+        else
+                echo "Unkown parameter"
+    fi
+    cd $dirAccount
+       ls -lah *.csv
+                du -sh *.csv
+
+}
+echo -n "Please type in accounts to be checked, separated by spaces (sample: STT_FM JCW_FM APW_FM PT_FM USAP_FM CP_FM): "
+read account
+
+accounts=($account)
+
+for i in "${accounts[@]}"
+do
+        getDir $i
+done
+
+#sendEmail
+
+#echo "PLEASE SEND THE LOGS"
+
+cd /data/feeds_script
