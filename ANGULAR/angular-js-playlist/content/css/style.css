@@ -1,0 +1,50 @@
+body{
+	background-color: lightblue;
+}
+#wrapper{
+	width: 100%;
+	padding: 0px;
+	margin: 0px;
+	position: absolute;
+}
+#form{
+	width: 50%;
+	height: 200;
+	padding: 0px;
+	margin: 0px;
+	background-color: white;
+	margin: 20px;
+	float: left;
+}
+#form input{
+	padding: 0px;
+	border-style: solid;
+	width: 99%;
+}
+#form:after{
+	content: "";
+	clear:both;
+	display:block;
+}
+#paragraph{
+	width: 50%;
+	height: 200;
+	padding: 0px;
+	margin: 0px;
+	background-color: white;
+	margin: 20px;
+	float: left;
+}
+#paragraph:after{
+	content: "";
+	clear:both;
+	display:block;
+}
+
+/* COLOR */
+.orange{
+	color: orange;
+}
+.red{
+	color: red;
+}

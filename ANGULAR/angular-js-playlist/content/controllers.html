@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myNinjaApp">
+	<head>
+		<title>TheNetNinja Angular Playlist</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script type="text/javascript" src="../app/lib/angular.min.js"></script>
+		<script type="text/javascript" src="../app/app.js"></script>
+	</head>
+	<body>
+		<div id="wrapper">
+			<div ng-controller="NinjaController">
+				<ul>
+					<li ng-repeat="ninja in ninjas">{{ninja}}</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>
