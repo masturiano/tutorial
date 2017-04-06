@@ -1,0 +1,44 @@
+SQL -	Structure Query Language
+	Query Analyzer / Enterprise Manager
+DDL -	Data Definition Language
+DML -	Data Manipulation Language
+DQL -	Data Query Language
+TCL -	Transaction Control Language
+
+=================================
+
+DDL -	Database
+	Tables
+DML -	Add
+	Edit
+	Delete
+DQL -	Record
+	Retrieve
+	Selecting
+TCL -	Transactions
+
+=================================
+
+Create - DDL
+Alter  - DDL
+Drop   - DDL
+Insert - DML
+Update - DML
+Delete - DML
+
+=================================
+
+Platform - Operating System
+Front en - Programming Language
+Back en  - Database Software
+
+=================================
+
+HIERARCHY OF RECORD
+-------------------
+Bit
+Byte
+Fields
+Records
+File
+Database

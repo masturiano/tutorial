@@ -1,0 +1,24 @@
+Bigint	   - 9223372036854775807
+Int	   - 2,147,483,647
+Small int  - 32,767
+Tiny int   - 0 to 255
+
+Bit	- 1 or 0
+Decimal - if decimal
+Numeric - if decimal
+
+MONEY
+Money	    - Big Timer
+Small Money - 214,748,3647
+
+UNICODE
+-------
+Char	- Max. 8,000 char
+Varchar	- Max. 8,000 char
+Text	- (2,147,483,647) char
+
+NONUNICODE
+----------
+Nchar	 - Max. 4,000 char
+Nvarchar - Max. 4,000 char
+Ntext	 - (1,073,741,823) char

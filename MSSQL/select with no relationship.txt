@@ -1,0 +1,52 @@
+There are a number of ways to do this, depending on what you really want. With no common columns, you need to decide whether you want to introduce a common column or get the product.
+
+Let's say you have the two tables:
+
+parts:              custs:
++----+----------+   +-----+------+
+| id | desc     |   |  id | name |
++----+----------+   +-----+------+
+|  1 | Sprocket |   | 100 | Bob  |
+|  2 | Flange   |   | 101 | Paul |
++----+----------+   +-----+------+
+
+Forget the actual columns since you'd most likely have a customer/order/part relationship in this case; I've just used those columns to illustrate the ways to do it.
+
+A cartesian product will match every row in the first table with every row in the second:
+
+> select * from parts, custs;
+      id desc     id  name
+      -- ----     --- ----
+      1  Sprocket 101 Bob
+      1  Sprocket 102 Paul
+      2  Flange   101 Bob
+      2  Flange   102 Paul
+
+That's probably not what you want since 1000 parts and 100 customers would result in 100,000 rows with lots of duplicated information.
+
+Alternatively, you can use a union to just output the data, though not side-by-side (you'll need to make sure column types are compatible between the two selects, either by making the table columns compatible or coercing them in the select):
+
+> select id as pid, desc, '' as cid, '' as name from parts
+  union
+  select '' as pid, '' as desc, id as cid, name from custs;
+    pid desc     cid name
+    --- ----     --- ----
+                 101 Bob 
+                 102 Paul
+    1   Sprocket
+    2   Flange
+
+In some databases, you can use a rowid/rownum column or pseudo-column to match records side-by-side, such as:
+
+id desc     id  name
+-- ----     --- ----
+1  Sprocket 101 Bob
+2  Flange   101 Bob
+
+===========================================
+
+The code would be something like:
+
+select a.id, a.desc, b.id, b.name
+from parts a, custs b
+where a.rownum = b.rownum;

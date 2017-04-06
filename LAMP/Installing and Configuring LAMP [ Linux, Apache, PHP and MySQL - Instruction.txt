@@ -1,0 +1,123 @@
+======================================
+FETCH THE LATEST RESOURCES OR SOFTWARE
+======================================
+
+$ sudo apt-get update
+
+=========================================
+INSTALL THE MYSQL-SERVER AND MYSQL-CLIENT
+=========================================
+
+$ sudo apt-get install mysql-server mysql-client
+
+QUESTION: Additional space will be used
+NEXT STEP: type yes
+
+
+===============
+INSTALL APACHE2
+===============
+
+$ sudo apt-get install apache2
+
+QUESTION: Additional space will be used
+NEXT STEP: type yes
+
+============
+INSTALL PHP5
+============
+
+$ sudo apt-get install php5
+
+QUESTION: Additional space will be used
+NEXT STEP: type yes
+
+=================================================
+INSTALL THE COMMUNICATION BETWEEN APACHE AND PHP5
+=================================================
+
+$ sudo apt-get install libapache2-mod-php5
+
+================================================
+INSTALL THE COMMUNICATION BETWEEN PHP5 AND MYSQL
+================================================
+
+$ sudo apt-get php5-mysql
+
+$ sudo apt-get install php5-mysql
+
+===========================
+CHECK THE APACHE IF WORKING
+===========================
+
+Open the browswer then type the default ipaddress e.g 192.168.0.151
+
+========================
+CHECK THE PHP IF WORKING
+========================
+
+$ cd /var/www/
+
+Create file phpinfo.php
+Content:
+<?php
+phpinfo();
+?>
+
+Then go to browswer again access the phpinfo.php
+
+===========================
+INSTALL ADDITIONAL PHP NEED
+===========================
+
+
+List: php5-curl php5-gd php5-idn php-pear php5-imagick php5-imap php5-mcrypt php5-memcache php5-ming php5-ps php5-pspell php5-recode php5-snmp php5-sqlite php5-tidy php5-xmlrpc php5-xsl php5-common
+
+$ sudo apt-get install "paste the list"
+
+
+QUESTION: Additional space will be used
+NEXT STEP: type yes
+
+============
+ACCESS MYSQL
+============
+
+$ mysql -u root -p "input the password"
+
+Test some query:
+
+mysql> show databases;
+mysql> create databases test;
+mysql> show databases;
+mysql> use test;
+mysql> create table tb_test(
+-> id int not null primary key auto_increment;
+-> name varchar(100) null);
+
+mysql> show tables;
+mysql> descript tb_test;
+
+===================
+INSTALL PHP MYADMIN
+===================
+
+$ sudo apt-get install phpmyadmin
+
+QUESTION: Additional space will be used
+NEXT STEP: type yes
+
+Select the apache if theres a prompt and use the space bar to select
+
+dbconfig-common Select yes
+
+Input the administrative password use same
+
+Input the mysql password use same
+
+
+==================
+ACCESS PHP MYADMIN
+==================
+
+Open the browswer then type the default ipaddress e.g 192.168.0.151/phpmyadmin

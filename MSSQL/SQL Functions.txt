@@ -1,0 +1,49 @@
+max   - for non numeric
+min   - for non numeric
+count - for non numeric
+avg   - numeric
+sum   - numeric
+
+e.g
+select max(age), min(birth), max(name), avg(age) from tablename
+
+===============================================================
+
+select fname+lname from tablename - combine column name
+
+=======================================================
+
+String functions
+----------------
+
+substring(string,start,length)
+right(string,n)
+left(string,n)
+replace(string,string to be replace,replacement)
+stuff(string,start,length,new string)
+upper(string)
+lower(string)
+ltrim(string)
+rtrim(string)
+trim(string)
+len(string)
+path index(pattern,string)
+char index(pattern,string)
+unicode(char)
+nchar(n)
+str(float,[length,decimal])
+space(n)
+reverse(string)
+char(n)
+ascii(char)
+replicate(string,n) - repeat
+
+Math functions
+--------------
+power(n,n) base,exponent 4,4 (4*4*4*)
+sort(n)
+ceiling(n) 4 become 5
+floor(n) 4 still 4
+round(m,n) round of
+truncate(m,n) - cut 2 last digit
+abs(n) - make it positive

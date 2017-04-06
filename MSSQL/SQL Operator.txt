@@ -1,0 +1,74 @@
+List Operator
+Relational Operator
+Logical Operator
+Range Operator
+Link Known Value Operator
+String Operator
+=========================
+
+List
+----
+In
+Not in
+e.g
+where city in ('ny','lv','ca')
+
+Relational
+----------
+=
+>
+<
+>=
+<=
+!=
+<>
+!>
+!<
+at most	     - equal and reverse <=
+at least     - equal and more >=
+minimum of   - >=
+maximum of   - <=
+more than    - >=
+on or befire - <=
+on or after  - >=
+before	     - <
+after	     - >
+on	     - =  
+
+Range
+-----
+Between
+Not between
+e.g
+where birth between '01/01/2000' and '12/31/2010'
+
+Known Value Operator
+--------------------
+is null
+not null
+
+String Operator
+---------------
+Like
+Not like
+e.g
+where pet_name like 'A%' - start
+		    '%A' - end
+		   '%A%' - any where
+		   '?A%' - second letter
+		   '_A%' - second letter
+		   '???' - 3letters
+
+=========================
+WILD CARD CHARACTERS
+%   - 0 or more character
+?   - any single character
+[]  - option
+[^] - not in the option
+[-]  - continues range of values
+
+e.g option
+[AEIOU]%
+[AEIOU]%[AEIOU]
+e.g not in the option
+[^AEIOU]%

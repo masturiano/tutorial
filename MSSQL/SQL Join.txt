@@ -1,0 +1,80 @@
+Cross Join
+Natural
+Equi
+Self
+Outer
+================
+
+Cross - Joint that includes more than one
+	table without any condition in the on clause
+
+Syntax:
+select fieldname
+from table
+cross join tablename
+
+================
+
+Natural Join - Join that restrincts the reduntdant
+	       column data from the result set
+
+Syntax:
+select t.title, p.pubname
+from titles t
+join publishers p
+on t.pibid = p.pubid
+
+select f.fname,c.color
+from tb_fruits f
+join tb_fcolor c
+on f.id = c.id
+
+================
+
+Equi join - A join thet uses an (*) in the select
+lisk and displays redundant column data in the result set
+
+Syntax:
+select *
+from sales s join titles t
+on s.titlesID = t.titlesID
+join publishers p
+on t.pubID = p.puID
+
+================
+
+Self join - A join when one row in a
+	    table correlates with other rows
+	    in the same table
+
+ex. list the titles of books from the business category
+with the same publishers
+
+syntax:
+select t1.titleID,t1pubId
+t2.titleID,t2pubID
+from titles t1
+on t1,pubID = t2pubID
+where t1.type = 'business'
+
+-===============
+
+Outer join - When the result set contains all
+the rows from one tableand the matching rows from another
+
+syntax:
+select columnnames
+from tablename
+[left/right] outer join tablename
+on tablename.ref_columnname
+join operator
+tablename.ref_columnname
+
+Left - 1st table matching rows from the 2nd table
+Right - 2nd table matching rows from the 1st table
+
+===============
+JOIN using pubID
+
+select * from tb_fruits
+left join tb_fcolor using(id);

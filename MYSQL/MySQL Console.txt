@@ -1,0 +1,25 @@
+Server
+------
+
+c:
+cd prog*
+cd mysql
+cd my*
+cd bin
+mysqld-nt --console
+
+Client
+------
+c:
+cd prog*
+cd mysql
+cd my*
+cd bin
+mysql -uroot
+
+=================
+
+create database
+use database
+show tables
+desc tables
