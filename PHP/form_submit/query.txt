@@ -1,0 +1,16 @@
+create database eps_consultant
+
+use eps_consultant
+
+show create table tb_info
+
+CREATE TABLE `tb_info` (
+ `ID` int(10) NOT NULL AUTO_INCREMENT COMMENT 'ID',
+ `FNAME` varchar(100) DEFAULT NULL COMMENT 'FIRST NAME',
+ `MNAME` varchar(100) NOT NULL COMMENT 'MIDDLE NAME',
+ `LNAME` varchar(100) NOT NULL COMMENT 'LAST NAME',
+ `BDAY` date NOT NULL COMMENT 'BIRTHDAY',
+ PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1
+
+insert into tb_info (FNAME,MNAME,LNAME,BDAY) VALUES('MYDEL','ANDALEON','ASTURIANO','1987-06-24');

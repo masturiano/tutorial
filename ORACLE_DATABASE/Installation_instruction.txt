@@ -1,0 +1,49 @@
+Installation instructions:
+
+1. Unzip the files
+2-1. Open database2 -> stage -> Components
+2-2. Copy all folders
+2-3. Open database1 -> stage -> Components
+2-4. Paste all folders
+3-1. On database1 folder
+3-2. Run setup as administrator
+3-3. Uncheck the message (I wish to receive security updates)
+3-4. Click next
+3-5. Select the Create and configure a database
+3-6. Click next
+3-7. Select Desktop Class / Server Class
+3-8. 
+Credentials:
+	Database edition: Enterprize Edition
+	Character set: Default
+	Global database name: orcl
+	Administrative password: admin
+	Confirm password: admin
+3-9. Click next
+3-10. Click yes
+4-1. Click password management
+4-2. Password management
+4-3. SYS -> New password: admin -> Confirm password: admin
+4-4. SYSTEM -> New password: admin -> Confirm password: admin
+4-5. HR -> Uncheck -> New password: admin -> Confirm password: admin
+4-6. Click yes
+4-7. Click ok
+5. Click close
+6-1. Go to CMD
+6-2. Type: set ORACLE_SID=orcl
+6-3. Type: sqlplus sys/oracle as sysdba
+7-1. Type Query: select name from v$database;
+7-2. Type: quit
+7-3. Type: exit
+8-1. Access thru browser -> https://localhost:1158/em/console/logon/logon
+8-2. Username: sys
+8-3. Password: admin
+8-4. Type Username: admin
+8-5. Type password: admin
+8-6. Connect As select: SYSDBA
+
+ERROR ON "Oracle SQL Developer"
+Solution: 
+1. Go to path: C:\app\mydzellarann\product\11.2.0\dbhome_1\NETWORK\ADMIN
+2. Open filename: listener.ora
+3. Check the port number e.g 1521

@@ -1,0 +1,7 @@
+Programming Language:
+=====================
+jQuery - js library for all kinds of tasks
+Javascript - oop language manipulates web page and data
+html - markup language to design web page
+json - javascript object notation stores data in key value pairs
+css - styling webpages
