@@ -1,0 +1,176 @@
+===
+GIT
+===
+
+=====================
+CREATE FEATURE BRANCH
+=====================
+
+COMMAND: GIT branch f_branch
+
+=====================
+GO TO FEATURE BRANCH
+=====================
+
+COMMAND: GIT checkout f_branch
+
+==================
+ADD SUBJECTED FILE
+==================
+
+COMMAND: GIT add filename
+
+===========================
+COMMIT TO FILE WITH MESSAGE
+===========================
+
+COMMAND: GIT commit -m 'message or comment'
+
+
+==================
+ADD SUBJECTED FILE
+==================
+
+COMMAND: GIT add filename
+
+=============================
+MERGE BRANCH TO MASTER BRANCH
+=============================
+
+COMMAND: GIT merge f_branch
+
+======================================
+SEND THE LOCAL BRANCH TO REMOTE BRANCH
+======================================
+
+COMMAND: GIT push origin master
+
+==========
+VERSIONING
+==========
+
+COMMAND: GIT tag 1.0.0 -m '1.0.0' develop
+
+* sample version format 1.0.0
+* first digit major changes
+* second digit minimal changes
+* third digit minor changes
+
+
+=====================================================================================
+*************************************************************************************
+=====================================================================================
+
+======================
+COMPARE THE DIFFERENCE
+======================
+
+COMMAND: GIT diff filename
+
+===========
+VIEW STATUS
+===========
+
+COMMAND: GIT status
+
+========
+VIEW LOG
+========
+
+COMMAND: GIT log
+
+==============================
+COPY THE FILES FROM REPOSITORY
+==============================
+
+COMMAND: GIT pull origin master
+
+=====================
+GO TO FEATURED BRANCH
+=====================
+
+COMMAND: GIT checkout -b f_empty_sample
+
+============
+UNDO CHANGES
+============
+
+COMMAND: GIT checkout -- php filename
+
+=================
+GO TO BRANCH NAME
+=================
+
+COMMAND: GIT checkout branchname
+
+================
+HIDE THE CHANGES
+================
+
+COMMAND: GIT stash
+
+================
+UNDO THE CHANGES
+================
+
+COMMAND: git stash apply
+
+============================
+COPY THE LOCAL MASTER BRANCH
+============================
+
+COMMAND: GIT checkout -b f_branch origin/master
+
+===================================================
+COPY THE LOCAL MASTER BRANCH WITH SPECIFIC FILENAME
+===================================================
+
+COMMAND: GIT checkout -b f_branch filename origin/master
+
+=============================
+COPY THE REMOTE MASTER BRANCH
+=============================
+
+COMMAND: GIT checkout -b f_branch origin master
+
+
+=======
+TAGGING
+=======
+
+> git tag 1.0.0 -m '1.0.0' develop
+git branch develop
+> git push origin 7.6.0
+Git branch develop
+> git merge 7.6.0
+git branch master
+
+=================================
+FETCH TAGS - GET INFO FROM ORIGIN
+=================================
+
+go to production
+
+> git fetch -tags
+> git describe -tags
+
+> git fetch -- all
+
+=====
+CLONE
+=====
+
+COMMAND: git clone soureURL FolderNameCreate	
+	
+=================================================
+pang delete sa origin ng nadelete na tag sa local
+=================================================
+	
+COMMAND: git push origin :refs/tags/1.1.0-RC3
+
+
+=====================
+LIST TAG WITH MESSAGE
+=====================
+	
+COMMAND: git tag -N
