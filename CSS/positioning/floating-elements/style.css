@@ -1,0 +1,18 @@
+body{
+	background:gray;
+}
+.wrapper{
+	background:#fff;
+	max-width:968px;
+	margin:0 auto;
+	padding:20px;
+}
+.wrapper:after{
+	content:"";
+	display:block;
+	clear:both;
+}
+img{
+	float:left;
+	margin:10px;
+}

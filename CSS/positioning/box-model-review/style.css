@@ -1,0 +1,11 @@
+p,a{
+	width:50%;
+	height:20px;
+	padding:30px;
+	margin:20px;
+	border:1px;
+	border-color: black;
+	border-style: solid;
+	/*display:inline-block;*/ /* responsive */
+	display:block; /* not responsive */
+}
