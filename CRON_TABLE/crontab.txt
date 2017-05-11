@@ -1,0 +1,22 @@
+MINUTE(0-59) HOUR(0-23) DATA(1-31) MONTH(1-12) DOW(0-7)
+* ASTERIS(ALL)
+
+RANGE: USE DASH, EXAMPLE MINUTE(30-40) OR MINUTE(30-40/2) EVERY 2 MINUTES
+ASSIGN: USE COMMA, EXAMPLE HOUR(1,2,23)
+
+=======
+COMMAND
+=======
+TO SELECT EDITOR: select-editor
+	choose 3
+
+EDIT CRONTAB: crontab -e
+LIST CRONTAB: crontab -l
+DELETE CRONTAB: crontab -r
+USER: crontab -u
+
+crontab -u demoname -e
+crontab -u demoname -r
+crontab -u demoname -l
+
+
